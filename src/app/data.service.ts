@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { visitAll } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  showMessage: boolean = false;
+  visible: boolean = false;
   constructor(private http: HttpClient) { }
 
-  clicked() {
-    this.showMessage = true;
-    console.log(this.showMessage);
+  showOnClick() {
+    this.visible = true;
     console.log('clicked');
   }
+
   getUsers() {
     return this.http.get('https://reqres.in/api/users');
   }

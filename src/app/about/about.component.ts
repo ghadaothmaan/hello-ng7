@@ -13,7 +13,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  // TODO: fix this it doesn't work
   firstClick() {
-    this.data.clicked();
+    this.data.showOnClick();
   }
 }
